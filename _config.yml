@@ -1,13 +1,13 @@
 # Site settings
-title: Clean Blog
+title: The Lowly Admin
 header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
+email: sohail@me.com
+description: "Geek. Box.com employee with a secret identity as an artist."
+baseurl: "/"
+url: "http://lowlyadmin.com"
+twitter_username: sohail
+github_username:  sohailmamdani
+
 
 # Build settings
 markdown: kramdown
