@@ -22,7 +22,8 @@ alert(s);
 Standard Jekyll Syntax:
 
 {% highlight json %}
- ssl => true
+var s = "JavaScript syntax highlighting";
+alert(s);
  {% endhighlight %}
  
  
