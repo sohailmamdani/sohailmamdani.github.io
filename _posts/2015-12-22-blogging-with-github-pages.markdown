@@ -24,6 +24,10 @@ Standard Jekyll Syntax:
 {% highlight json %}
 var s = "JavaScript syntax highlighting";
 alert(s);
- {% endhighlight %}
+{% endhighlight %}
  
- 
+Using the Github Markdown definitely works better - and I can preview the syntax highlighing in the Github web interface too, which is not the case for Jekyll code. 
+
+Next up, Disqus integration. Because I know you're all dying to interact with me via my blog.
+
+Then: truncating posts on the front page.
