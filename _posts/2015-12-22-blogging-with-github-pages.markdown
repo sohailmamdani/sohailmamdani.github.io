@@ -13,8 +13,10 @@ I'm liking the combo of Jekyll and Github Pages a LOT. Just added Typekit to my 
 Also exploring using redcarpet markdown instead of kramdown so I can use Github-flavored markdown. This is mostly so I can mess around with `inline code`. Wonder if this works with standard syntax highlighting.
 
 Github Markdown test:
+
 ```javascript
- ssl => true
+var s = "JavaScript syntax highlighting";
+alert(s);
 ```
  
 Standard Jekyll Syntax:
