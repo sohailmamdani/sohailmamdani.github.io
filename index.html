@@ -23,6 +23,7 @@ header-img: "img/main_bg.jpg"
     {{ post.content | split:"<!-- more -->" | first % }}
   {% else %}
     {{ post.content | strip_html | truncatewords:100 }}
+    <a href="{{ post.url | prepend: site.baseurl }}">Read more... </a>
   {% endif %}
 </div>
    </section>
