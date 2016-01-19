@@ -18,7 +18,16 @@ header-img: "img/main_bg.jpg"
     </a>
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
     <section>
-                {{ post.content }}
+ <div class="post-content-truncate">
+  {% if post.content contains "<!-- more -->" %}
+    {{ post.content | split:"<!-- more -->" | first % }}
+    <br />
+    <a href="{{ post.url | prepend: site.baseurl }}">Read more... </a>
+  {% else %}
+    {{ post.content}}
+    
+  {% endif %}
+</div>
    </section>
 </div>
 <hr>
