@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is macOS Going to Replace OS X?
+title: I Think macOS is Going to Replace OS X
 date: 2016-01-19 17:23 -0800
 categories: mac
 tags: mac, tech, os
@@ -8,7 +8,9 @@ tags: mac, tech, os
 
 I was thinking about this a while back, when tvOS was first announced. Here's what the current slate of operating systems from Apple like:
 
-![Current OS' from Apple](http://sohailmamdani.github.com/img/osnames-current.png =200)
+<img src="http://sohailmamdani.github.com/img/osnames-current.png" width="200px" />
+
+<!-- ![Current OS' from Apple](http://sohailmamdani.github.com/img/osnames-current.png) -->
 
 OS X is the outlier. Which is why I think Apple's slate is going to go this way soon, maybe as soon as WWDC 2016:
 
