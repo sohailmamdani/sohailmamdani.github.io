@@ -8,10 +8,12 @@ tags: mac, tech, os
 
 I was thinking about this a while back, when tvOS was first announced. Here's what the current slate of operating systems from Apple like:
 
-<img src="http://sohailmamdani.github.com/img/osnames-current.png" width="200px" />
+<img src="http://sohailmamdani.github.com/img/osnames-current.png" alt="Current OS' from Apple" width="200px" />
 
 <!-- ![Current OS' from Apple](http://sohailmamdani.github.com/img/osnames-current.png) -->
 
 OS X is the outlier. Which is why I think Apple's slate is going to go this way soon, maybe as soon as WWDC 2016:
 
-![Future OS slate from Apple](http://sohailmamdani.github.com/img/osnames-new.png)
+<!-- ![Future OS slate from Apple](http://sohailmamdani.github.com/img/osnames-new.png) -->
+
+<img src="http://sohailmamdani.github.com/img/osnames-new.png" alt="Future OS slate from Apple" width="200px" />
