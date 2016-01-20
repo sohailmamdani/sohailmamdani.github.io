@@ -10,6 +10,6 @@ I was thinking about this a while back, when tvOS was first announced. Here's wh
 
 ![Current OS' from Apple](http://sohailmamdani.github.com/img/osnames-current.png)
 
-OS X stands out as the outlier. Which is why I think Apple's slate is going to go this way soon, maybe as soon as WWDC 2016.
+OS X is the outlier. Which is why I think Apple's slate is going to go this way soon, maybe as soon as WWDC 2016:
 
 ![Future OS slate from Apple](http://sohailmamdani.github.com/img/osnames-new.png)
