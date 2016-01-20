@@ -8,9 +8,7 @@ tags: mac, tech, os
 
 I was thinking about this a while back, when tvOS was first announced. Here's what the current slate of operating systems from Apple like:
 
-```html
-<img src="http://sohailmamdani.github.com/img/osnames-current.png" width="200px")
-```
+![Current OS' from Apple](http://sohailmamdani.github.com/img/osnames-current.png =200)
 
 OS X is the outlier. Which is why I think Apple's slate is going to go this way soon, maybe as soon as WWDC 2016:
 
