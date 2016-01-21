@@ -6,6 +6,8 @@ categories: tech
 tags: tech,blogging,markdown,apps,mac
 ---
 
+(**Update**: I figured out the issue with the rendering error: extra ":" in the post title.)
+
 I have a problem. I'm constantly trying to find one new Markdown app after the other. Now I've got a new one I'm trying.
 
 <img src="img/lightpaper.png" width="800px" />
