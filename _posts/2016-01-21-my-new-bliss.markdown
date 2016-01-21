@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My New Bliss: Blogging With LightPaper
+title: My New Bliss\: Blogging With LightPaper
 date: 2016-01-21 00:09 -0800
 categories: tech
 tags: tech,blogging,markdown,apps,mac
