@@ -23,3 +23,5 @@ So far I've seen:
 
 
 There were a few more; Elasticsearch generates a new shard name every time the service is restarted. I'm almost tempted to restart the service a few more times, just to see what it'll come up with. 
+
+Also, it'd be great if the commands to check the integrity of an index were, you know, simpler.
