@@ -8,7 +8,7 @@ tags: java,mac,plugins,oracle
 
 Saw this beaut today when installing the latest version of Java.
 
-![Yahoo now replaces Ask.com as the default adware for Java](http://sohailmamdani.github.com/img/oh-oracle.jpg)
+![Yahoo now replaces Ask.com as the default adware for Java](http://sohailmamdani.github.com/img/oh-oracle.png)
 
 Looks like Yahoo! has replaced Ask.com as the default adware for Java installs. 
 
