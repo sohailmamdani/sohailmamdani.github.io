@@ -20,6 +20,8 @@ So I sent off an angry tweet to Pinboard.
 
 Then I went looking for a solution and came across a few tweets from Pinboard that shone some light on the issue.
 
+<!-- more -->
+
 Here are the ones of interest, oldest to newest. I haven't quote all of his tweets in reference to this story, just the ones I felt were most germane to the topic.
 
 <div class="storify"><iframe src="//storify.com/SohailMamdani/the-ifttt-pinboard-story/embed?header=false&border=false" width="100%" height="750" frameborder="no" allowtransparency="true"></iframe><script src="//storify.com/SohailMamdani/the-ifttt-pinboard-story.js?header=false&border=false"></script><noscript>[<a href="//storify.com/SohailMamdani/the-ifttt-pinboard-story" target="_blank">View the story "The IFTTT/Pinboard Story" on Storify</a>]</noscript></div>
