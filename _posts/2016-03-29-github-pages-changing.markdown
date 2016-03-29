@@ -20,12 +20,12 @@ But good news followed in the next line.
 
 I made the changes to config.yml and sure enough, GFM-style code snippets work.
 
-```
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-```
+
+    ```javascript
+    var s = "JavaScript syntax highlighting";
+    alert(s);
+    ```
+
 
 This renders as 
 
