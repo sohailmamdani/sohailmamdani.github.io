@@ -6,7 +6,7 @@ categories: tech
 tags: tech,web,business
 ---
 
-I'm browsing through emails this morning, and this little gem pops up from [IFTT](http://ifttt.com).
+I'm browsing through emails this morning, and this little gem pops up from [IFTTT](http://ifttt.com).
 
 ![](http://lowlyadmin.com/img/2016-03-28-ifttt-email.png)
 
