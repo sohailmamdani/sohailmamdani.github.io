@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IFTTT and Pinboard (and why I maybe need to learn to code for reals now)
-date: 2016-03-28 17:24 -0800
+date: 2016-03-28 13:24 -0800
 categories: tech
 tags: tech,web,business
 ---
