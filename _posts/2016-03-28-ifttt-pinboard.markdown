@@ -10,7 +10,7 @@ I'm browsing through emails this morning, and this little gem pops up from [IFTT
 
 ![](http://lowlyadmin.com/img/2016-03-28-ifttt-email.png)
 
-Well that sucks. I pipe all my "Saved for later" items from [Feedly](http://feedly.com) into Pinboard, and I have Pocket send links to all saved articles to Pinboard via IFTTT too. 
+Well that sucks. I pipe all my "Saved for Later" items from [Feedly](http://feedly.com) into [Pinboard](http://pinboard.in), and I have Pocket send links to all saved articles to Pinboard via IFTTT too. 
 
 WTF. The email from IFTTT made it clear that Pinboard was to blame for this. 
 
