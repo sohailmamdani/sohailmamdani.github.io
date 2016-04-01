@@ -6,6 +6,8 @@ categories: tech
 tags: tech,web,business
 ---
 
+UPDATE: IFTTT responded to all their Pinboard customers (at the bottom)
+
 I'm browsing through emails this morning, and this little gem pops up from [IFTTT](http://ifttt.com).
 
 ![](http://lowlyadmin.com/img/2016-03-28-ifttt-email.png)
@@ -51,3 +53,15 @@ Having a task, with necessity as the driving force behind it, usually works for 
 So why couldn't it work now? 
 
 I guess it should. Which means I guess I'm about to find out.
+
+
+UPDATE: IFTTT sent an email to their customers.
+
+![](http://lowlyadmin.com/img/2016-03-31-ifttt-response.png)
+
+And then there was this from [@pinboard](http://twitter.com/pinboard).
+
+<div class="storify"><iframe src="//storify.com/SohailMamdani/ifttt-vs-pinboard-finale/embed?border=false" width="100%" height="750" frameborder="no" allowtransparency="true"></iframe><script src="//storify.com/SohailMamdani/ifttt-vs-pinboard-finale.js?border=false"></script><noscript>[<a href="//storify.com/SohailMamdani/ifttt-vs-pinboard-finale" target="_blank">View the story "IFTTT vs Pinboard, Finale" on Storify</a>]</noscript></div>
+
+So IFTTT will continue to work with Pinboard for a bit. Gives me time to roll my own solution, I guess.
+
