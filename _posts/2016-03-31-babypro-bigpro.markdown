@@ -10,7 +10,7 @@ I swung by my neighborhood Apple Store this morning to pick up an iPad. That alo
 
 First, context. I've been using an iPad Pro 12.9" as part of a test at [my day job](https://box.com) and I've got some very definite observations about this device and what it can do, is good for, etc. Peppered in this review are many of those thoughts and notions, both good and bad. That's the lens through which I looked at what the Baby Pro (props to [the folks at iMore for coming up with that](http://imore.com)) can do. 
 
-<!--more-->
+<!-- more-->
 
 ### Size Matters
 
