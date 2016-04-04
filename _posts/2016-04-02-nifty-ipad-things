@@ -1,0 +1,23 @@
+---
+layout: post
+title: Nifty Things I Learned While Working With the iPad Pro as a Primary Device
+date: 2016-04-03 14:45 -0800
+categories: apple
+tags: apple,ios,mac,iPad,iPad Pro,
+---
+
+I've been using two iPad Pros over the last week, trying to see which one I will end up going with as my next iPad. As much as I want to "settle" for the iPad Baby Pro, I keep coming back to the Big Pro, for a variety or reasons. 
+
+With that in mind, here are a few nifty things I learned about using both iPads in the context of a primary work device. 
+
+### 1. TextExpander rocks. 
+
+![](http://lowlyadmin.com/img/2016-04-02-textexpander.png)
+
+Textexpander really rocks on the iOS - as long as you're working in an app that supports it, like the awesome [Textastic editor for iPad](https://appsto.re/us/1LLI-.i) that I'm typing this up on right now. It's super easy, for example, to use the same "input-required" snippets I use on my Mac to fill out the post headings in Jekyll; typing in that abbreviation simply shunts me to TextExpander momentarily where I fill in the blanks on the form I set up for this, then sends the fully formed snippet back to Textastic. Normal non-interactive snippets fill in immediately, which makes blogging or writing documentation super-easy with Textexpander.
+
+### 2. Github is awesome with Working Copy
+
+![](http://lowlyadmin.com/img/2016-04-02-working-copy.png)
+
+Anders Borum's [Working Copy Enterprise](https://appsto.re/us/aEqH5.i) is a kick-ass Git client for iOS; in addition to the standard support for Github, it also connects to 
