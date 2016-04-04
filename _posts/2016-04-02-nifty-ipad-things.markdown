@@ -59,6 +59,7 @@ I'm the kind of person that likes to write in notebooks to flesh out thoughts in
 Venerable Mac app makers [Panic](http://panic.com) make some great software for iOS too. My two favorites are [Prompt (SSH client)](https://appsto.re/us/PTVR2.i) and  [Transmit (SFTP client)](https://appsto.re/us/IPUR2.i). 
 
 Transmit is actually much more than an SFTP client, however, and I've only just started to tap into the true power of this app. Here's what Panic have to say about Transmit.
+
 > The first cool thing: in iOS 8 (and later), the system Share sheet can be extended by apps. So when viewing a photo, if you hit the Share button, you’ll see a brand-new choice: Transmit. That photo can be instantly sent to your own private file server, website, or S3 bucket.
 >
 > Second, Apple added an extensible Document Picker, enabling Transmit to extend the open & save capabilities of other apps. That lets you open files directly off servers for editing. And when you save, changes go back to your server, too. It’s seamless. Third-party apps will be upgraded to support this soon.
