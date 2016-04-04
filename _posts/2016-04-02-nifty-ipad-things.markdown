@@ -6,7 +6,7 @@ categories: apple
 tags: apple,ios,mac,iPad,iPad Pro,
 ---
 
-I've been using two iPad Pros over the last week, trying to see which one I will end up going with as my next iPad. As much as I want to "settle" for the iPad Baby Pro, I keep coming back to the Big Pro, for a variety or reasons. 
+I've been using two iPad Pros over the last week, trying to see which one I will end up going with for my next iPad. As much as I want to "settle" for the iPad Baby Pro, I keep coming back to the Big Pro, for a variety or reasons. 
 
 With that in mind, here are a few nifty things I learned about using both iPads in the context of a primary work device. 
 
