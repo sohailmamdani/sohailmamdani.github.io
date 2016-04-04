@@ -46,7 +46,7 @@ Here's what happened on the Baby Pro with OneNote.
 
 ![](http://lowlyadmin.com/img/2016-03-31-writing-babypro.png)
 
-Ostensibly, this just means that Microsoft has to issue the aforementioned update and all should be well. But right now, the Big Pro works just fine without the updated.
+Ostensibly, this just means that Microsoft has to issue the aforementioned update and all should be well. But right now, the Big Pro works just fine without the update.
 
 ![](http://lowlyadmin.com/img/2016-03-31-writing-bigpro.png)
 
