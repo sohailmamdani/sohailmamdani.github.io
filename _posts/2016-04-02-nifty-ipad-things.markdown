@@ -72,7 +72,7 @@ I've already used Transmit to get some .gz and .zip files off to an AWS server; 
 
 ![](http://lowlyadmin.com/img/2016-04-02-side-by-side.png)
 
-Until I started using the iPad for more "serious" work, I hadn't given the newer iOS 9-style multitasking much of a workout. Since I started, it's been an incalculable asset. Admittedly, things are better on the iPad Big Pro, but even on the Baby Pro, it's super useful to be able to pull up Working Copy in a side window to quickly import an image and check on a filename, or to grab something from 1Password or a half-dozen other things. 
+Until I started using the iPad for more "serious" work, I hadn't given the newer iOS 9-style multitasking much of a workout. Since I started, it's been an incalculable asset. Admittedly, things are better on the iPad Big Pro, but even on the Baby Pro, it's super useful to be able to pull up Working Copy in a side window to quickly import an image and check on a filename, or to grab something from 1Password, or a half-dozen other things. 
 
 If I end up going with the Baby Pro, it won't be as comfortable as the Big Pro, where I could leave two apps up side-by-side all the time; on the Baby Pro, the second app just comes up long enough to get what I want and then I close it. Still, the Baby Pro isn't unusable for multitasking by _any_ measure; in fact, it's part of what's letting me use the iPad for "serious" work. 
 
