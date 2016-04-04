@@ -16,23 +16,23 @@ With that in mind, here are a few nifty things I learned about using both iPads 
 
 ![](http://lowlyadmin.com/img/2016-04-02-textexpander.png)
 
-Textexpander really rocks on the iOS - as long as you're working in an app that supports it, like the awesome [Textastic editor for iPad](https://appsto.re/us/1LLI-.i) that I'm typing this up on right now. It's super easy, for example, to use the same "input-required" snippets I use on my Mac to fill out the post headings in Jekyll; typing in that abbreviation simply shunts me to TextExpander momentarily where I fill in the blanks on the form I set up for this, then sends the fully formed snippet back to Textastic. Normal non-interactive snippets fill in immediately, which makes blogging or writing documentation super-easy with Textexpander.
+Textexpander really rocks on the iOS - as long as you're working in an app that supports it, like the awesome [Textastic editor for iPad](https://appsto.re/us/1LLI-.i) that I'm typing this up on right now. It's super easy, for example, to use the same "input-required" snippets I use on my Mac to fill out the post headings in Jekyll. Typing in that abbreviation simply shunts me to TextExpander momentarily, where I fill in the blanks on the form I set up for this. Once I hit "Done," it then sends the fully formed snippet back to Textastic. Normal non-interactive snippets fill in immediately, which makes blogging or writing documentation super-easy with Textexpander.
 
 ### 2. Github is awesome with Working Copy
 
 ![](http://lowlyadmin.com/img/2016-04-02-working-copy.png)
 
-Anders Borum's [Working Copy Enterprise](https://appsto.re/us/aEqH5.i) is a kick-ass Git client for iOS; in addition to the standard support for Github, it also connects to Git Enterprise, Bitbucket, or custom Git repos. In using it to blog with Github pages, I've yet to encounter something that had me reaching for my Macbook, so I'm pretty happy with it. 
+Anders Borum's [Working Copy Enterprise](https://appsto.re/us/aEqH5.i) is a kick-ass Git client for iOS; in addition to the standard support for Github, it also connects to Git Enterprise, Bitbucket, or custom Git repos. I use it to blog with Github pages, and I've yet to encounter something that had me reaching for my Macbook, so I'm pretty happy with it. 
 
 ### 3. Apple's Smart Keyboard covers are awesome... to a point
 
 ![](http://lowlyadmin.com/img/2016-04-02-keyboards.png)
 
-Apple make Smart Keyboard covers for both the Big and the Baby Pro. Both are awesome keyboards; even the Baby Pro's keyboard, which has less surface area and is therefore smaller than a standard keyboard. The Baby Pro's keyboard can feel a bit cramped, but only takes a few minutesto get used to, after which you're flying. 
+Apple make Smart Keyboard covers for both the Big and the Baby Pro. Both are awesome keyboards;, even the Baby Pro's keyboard, which has less surface area and is therefore smaller than a standard keyboard. The Baby Pro's keyboard can feel a bit cramped, but only takes a few minutes to get used to, after which you're flying. 
 
-Where things don't go over so well is on the Big Pro's keyboard. It's large and somewhat unweidly, especially when you fold it back and try to use the iPad Big Pro one-handed. In your right hand, you're able to press the loose keyboard end of the cover against the back of the iPad, and things are relatively steady, if a bit awkward thanks to the additional thickness and heft of the keyboard. In your left hand, however, the keyboard is out of reach and the magnets on the Big Pro aren't powerful enough to keep the cover closed, so it flaps loose. 
+Where things don't go over so well is on the Big Pro's keyboard. It's large and somewhat unweidly, especially when you fold it back and try to use the iPad Big Pro one-handed. In your right hand, you're able to press the loose keyboard end of the cover against the back of the iPad, and things are relatively steady, if a bit awkward thanks to the additional thickness and heft of the keyboard. In your left hand, however, the keyboard is out of reach and the magnets on the Big Pro aren't powerful enough to hold the cover against the back of the Big Pro, so it flaps loose. 
 
-Honestly, this isn't a fault; the size of the Big Pro's keyboard is unavoidable and I do think Apple have made it as light and thin as I've seen any keyboard, but because it's foldable, it's not as right. Still, I'd rather have it than not.
+Honestly, this isn't a fault; the size of the Big Pro's keyboard is unavoidable and I do think Apple have made it as light and thin as I've seen any keyboard, but because it's foldable, it's not as rigid. Still, I'd rather have it than not.
 
 ### 4. The battery widget is very useful
 
@@ -42,7 +42,7 @@ Okay, to be fair, I don't _need_ to know what the battery level of my Pencil is,
 
 ...
 
-Yeah, I don't have much to say about that. It's cool. It's usefull. Let's me see my Pencil battery level right in the Notifications Center.
+Yeah, I don't have much to say about that. It's cool. It's usefull. Lets me see my Pencil battery level right in the Notifications Center.
 
 ...
 
@@ -52,14 +52,13 @@ Right, moving along...
 
 I'm the kind of person that likes to write in notebooks to flesh out thoughts in my head. With an app like OneNote, I can now have my written and sketched ideas right there in the same page as neatly typed thoughts that come from my stream of consciousness. It's a win-win that has me firmly convinced I need an iPad Pro; at this point, it isn't a question of "if," just a question of "which one."
 
-### 6. Panic makes nice apps
+### 6. Panic make nice apps
 
 ![](http://lowlyadmin.com/img/2016-04-02-panic-apps.png)
 
 Venerable Mac app makers [Panic](http://panic.com) make some great software for iOS too. My two favorites are [Prompt (SSH client)](https://appsto.re/us/PTVR2.i) and  [Transmit (SFTP client)](https://appsto.re/us/IPUR2.i). 
 
 Transmit is actually much more than an SFTP client, however, and I've only just started to tap into the true power of this app.
-
 > The first cool thing: in iOS 8 (and later), the system Share sheet can be extended by apps. So when viewing a photo, if you hit the Share button, you’ll see a brand-new choice: Transmit. That photo can be instantly sent to your own private file server, website, or S3 bucket.
 >
 > Second, Apple added an extensible Document Picker, enabling Transmit to extend the open & save capabilities of other apps. That lets you open files directly off servers for editing. And when you save, changes go back to your server, too. It’s seamless. Third-party apps will be upgraded to support this soon.
