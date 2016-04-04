@@ -10,6 +10,8 @@ I've been using two iPad Pros over the last week, trying to see which one I will
 
 With that in mind, here are a few nifty things I learned about using both iPads in the context of a primary work device. 
 
+<!-- more -->
+
 ### 1. TextExpander rocks
 
 ![](http://lowlyadmin.com/img/2016-04-02-textexpander.png)
