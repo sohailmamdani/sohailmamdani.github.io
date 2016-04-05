@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Switching Cellular Providers in iPad Pro 9.7
-date: 2016-04-05 15:08 -0800
+date: 2016-04-05 15:08 -0700
 categories: Apple
 tags: iOS, iPad, data, cellular
 ---
@@ -10,7 +10,7 @@ My 9.7-inch LTE iPad Pro comes with an embedded Apple SIM, which is awesome for 
 
 I also have an AT&T SIM that's attached to an account that harkens back to the days of the first iPad launch 7 years ago. Back then, AT&T offered an unlimited data for $30/mo plan that I signed up for and never stopped using. I moved this SIM to the iPad Mini that serves as my in-car nav console (no, I don't leave it in my car 24/7, so don't bother breaking in), but can now move it back to my Pro when I travel.
 
-Moving between SIMs is super-easy: justy go into the Settings app and tap on "Cellular Data." You'll see both your SIMs there, and can switch between the two.
+Moving between SIMs is super-easy: just to go into the Settings app and tap on "Cellular Data." You'll see both your SIMs there, and can switch between the two.
 
 ![](http://lowlyadmin.com/img/2016-04-05-ipad-cellular-switch.png)
 
