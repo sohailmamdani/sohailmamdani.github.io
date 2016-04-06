@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reason No. 23 Why Textastic Rocks: Fountain Syntax Definition
+title: Reason No. 23 Why Textastic Rocks\: Fountain Syntax Definition
 date: 2016-04-06 15:46 -0700
 categories: Writing
 tags: apple, ios,textastic,writing
