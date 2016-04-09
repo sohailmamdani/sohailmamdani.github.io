@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Things I Really Didn't Expect to See at an Apple Retail Store
-date: 2016-04-08 17:09 -0800
+date: 2016-04-08 17:09 -0700
 categories: Apple
 tags: Apple,retail,inventory
 ---
