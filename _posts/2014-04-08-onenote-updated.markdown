@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OneNote Updated for iPad Baby Pro - and it's Awesome
-date: 2016-04-09 16:10 -0800
+date: 2016-04-09 16:10 -0700
 categories: Apple
 tags: Apple,Microsoft,OneNote,iOS,iPad
 ---
