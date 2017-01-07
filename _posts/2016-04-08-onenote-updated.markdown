@@ -9,7 +9,7 @@ tags: Apple,Microsoft,OneNote,iOS,iPad
 While working on the new [iPad Baby Pro][1] a few days ago, I came across this one issue with [OneNote][2] that kept it from working as well on the Baby Pro. 
 
 So, being the entitled brat I can sometimes be, I took to twitter to , uh, "demand" that Microsoft answer for itself.
-
+<!-- more -->
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">. <a href="https://twitter.com/msonenote">@msonenote</a> any idea when you’ll have an update to OneNote iOS so palm rejection works better on new iPad Pro 9.7″? <a href="https://t.co/FvITnr9JsQ">https://t.co/FvITnr9JsQ</a></p>&mdash; Sohail Mamdani (@sohail) <a href="https://twitter.com/sohail/status/715934974906654724">April 1, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I got the rote answer from them.
