@@ -6,7 +6,7 @@ categories: Apple
 tags: Apple,Microsoft,OneNote,iOS,iPad
 ---
 
-While working on the new [iPad Baby Pro](http://lowlyadmin.com/apple/2016/03/31/babypro-bigpro/) a few days ago, I came across this one issue with [OneNote](http://onenote.com) that kept it from working as well on the Baby Pro. 
+While working on the new [iPad Baby Pro][1] a few days ago, I came across this one issue with [OneNote][2] that kept it from working as well on the Baby Pro. 
 
 So, being the entitled brat I can sometimes be, I took to twitter to , uh, "demand" that Microsoft answer for itself.
 
@@ -22,7 +22,7 @@ I guess I didn't expect much more than that, but then I got a nice surprice. Rya
 
 We exchanged a few DMs and sure enough, there was a shiny new update for OneNote later in the week. Now, writing in OneNote with Apple Pencil works beautifully.
 
-![](http://lowlyadmin.com/img/2014-04-09-onenote-updated.png)
+![][image-1]
 
 OneNote has become my go-to notes app, not least because I can now actually write in it. Add to that the fact that sync works across all my platforms (and I can even use the web app in Linux if I need it) and there are clippers for Safari/Firefox and I have an app that's getting ever closer to Evernote in functionality, but in an interface that's cleaner than Evernote has become. I find that I don't miss tags as much as I thought I did and the tabs/pages metaphor in OneNote is pretty effective for me, since it mimic the various notebooks I found myself writing in before I owned an iPad Baby Pro. 
 
@@ -35,3 +35,8 @@ Ryan's a class act. He immediately tweeted back.
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/sohail">@sohail</a> <a href="https://twitter.com/msonenote">@msonenote</a> that&#39;s on the list already ;)</p>&mdash; Ryan McMinn (@ryanmcminn) <a href="https://twitter.com/ryanmcminn/status/718865132370046976">April 9, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Well hot damn.
+
+[1]:	http://lowlyadmin.com/apple/2016/03/31/babypro-bigpro/
+[2]:	http://onenote.com
+
+[image-1]:	http://lowlyadmin.com/img/2014-04-09-onenote-updated.png

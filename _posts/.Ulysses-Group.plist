@@ -6,16 +6,6 @@
 	<dict>
 		<key>sheetClusters</key>
 		<dict>
-			<key>2014-04-08-onenote-updated.markdown</key>
-			<dict>
-				<key>lastModification</key>
-				<real>505455361.04401201</real>
-				<key>version</key>
-				<dict>
-					<key>82f248aa52ceb583f80eaa94572281019956ba2189259e8483f1eebf862266cf</key>
-					<integer>2</integer>
-				</dict>
-			</dict>
 			<key>2015-07-20-trust-google.markdown</key>
 			<dict>
 				<key>lastModification</key>
@@ -186,6 +176,16 @@
 					<integer>2</integer>
 				</dict>
 			</dict>
+			<key>2016-04-08-onenote-updated.markdown</key>
+			<dict>
+				<key>lastModification</key>
+				<real>505456643.496768</real>
+				<key>version</key>
+				<dict>
+					<key>82f248aa52ceb583f80eaa94572281019956ba2189259e8483f1eebf862266cf</key>
+					<integer>12</integer>
+				</dict>
+			</dict>
 			<key>2016-06-01-deploying-filebeat-on-macos.markdown</key>
 			<dict>
 				<key>lastModification</key>
@@ -213,7 +213,7 @@
 	<key>sheetClusters</key>
 	<array>
 		<array>
-			<string>2014-04-08-onenote-updated.markdown</string>
+			<string>2016-04-08-onenote-updated.markdown</string>
 		</array>
 		<array>
 			<string>the-view-from-the-trenches.markdown</string>
@@ -282,7 +282,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>82f248aa52ceb583f80eaa94572281019956ba2189259e8483f1eebf862266cf</key>
-			<integer>11</integer>
+			<integer>13</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>
