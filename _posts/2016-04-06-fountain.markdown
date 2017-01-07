@@ -6,16 +6,21 @@ categories: Writing
 tags: apple, ios,textastic,writing
 ---
 
-I have a secret identity. When I'm not plonking away at my keyboard, working on sysadmin-y stuff, I like to work on more fanciful projects. I write, I [shoot photos](http://www.anymedium.com/studio/), and of late, I'm tiptoeing [into video](http://www.anymedium.com/video/). 
-
-As part of that, I'm working on a new narrative short and thought I'd try working on that on my new [iPad Pro](http://apple.com/ipad-pro). Now, I have the industry standard [Final Draft](https://www.finaldraft.com) installed on my Mac, PC, iPad, and iOS devices. Problem is, it uses Dropbox for syncing scripts, which I don't use. 
-
-Instead, I broke out my trust text editor on the iPad and created a file with a .fountain suffix. Fountain, for those who don't know, is [a markup language specifically for writing scripts and screenplays](http://fountain.io). You write your script in a plain text editor marked up with Fountain syntax and then use an app like the awesome [Marked 2](http://marked2app.com) to convert it into a formatted script or screenplay. 
-
+I have a secret identity. When I'm not plonking away at my keyboard, working on sysadmin-y stuff, I like to work on more fanciful projects. I write, I [shoot photos][1], and of late, I'm tiptoeing [into video][2]. 
+As part of that, I'm working on a new narrative short and thought I'd try working on that on my new [iPad Pro][3]. Now, I have the industry standard [Final Draft][4] installed on my Mac, PC, iPad, and iOS devices. Problem is, it uses Dropbox for syncing scripts, which I don't use. 
+Instead, I broke out my trust text editor on the iPad and created a file with a .fountain suffix. Fountain, for those who don't know, is [a markup language specifically for writing scripts and screenplays][5]. You write your script in a plain text editor marked up with Fountain syntax and then use an app like the awesome [Marked 2][6] to convert it into a formatted script or screenplay. 
 I didn't expect Textastic to recognize the Fountain markup, but to my surprise, it totally did!
-
-![](http://lowlyadmin.com/img/2016-04-06-textastic.png)
-
-With Textastic open in the main window and the [Fountain Reference Guide](http://fountain.io/_downloads/fountain-reference.pdf) pulled up in [GoodReader](https://appsto.re/us/oanvU.i) in the side window, I'm able to type everything up in Fountain and then output it to a finished script later. 
-
+![][image-1]
+With Textastic open in the main window and the [Fountain Reference Guide][7] pulled up in [GoodReader][8] in the side window, I'm able to type everything up in Fountain and then output it to a finished script later. 
 Score one more for iPad productivity. 
+
+[1]:	http://www.anymedium.com/studio/
+[2]:	http://www.anymedium.com/video/
+[3]:	http://apple.com/ipad-pro
+[4]:	https://www.finaldraft.com
+[5]:	http://fountain.io
+[6]:	http://marked2app.com
+[7]:	http://fountain.io/_downloads/fountain-reference.pdf
+[8]:	https://appsto.re/us/oanvU.i
+
+[image-1]:	http://lowlyadmin.com/img/2016-04-06-textastic.png

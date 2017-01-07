@@ -7,7 +7,7 @@ tags: Apple,retail,inventory
 ---
 
 Swung by the [Apple Store at Stanford][1] to grab a spare Pencil and found myself slightly bemused by the contents of the shelves. There are things there I never expected to see at an Apple Store, ever. 
-\<!-- more --\>
+<!-- more -->
 ### Drones and Robots
  
 ![][image-1]
