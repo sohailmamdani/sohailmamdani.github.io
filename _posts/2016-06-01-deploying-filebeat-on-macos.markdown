@@ -9,7 +9,7 @@ tags: apple,mac,macos,filebeat,osquery
 Got a few questions about the way I've deployed Filebeat to transport OSQuery logs over the past few days, so I thought I'd do a quick writeup about it.
 
 There are a few components to this.
-
+\<!-- more --\>
 - Filebeat executable (the Darwin version)
 - `filebeat.yml` (config file to tell Filebeat where to deliver the logs to)
 - Certificates (for TLS transport, placed in your location of choice)
@@ -407,28 +407,28 @@ Finally, there's the launchd plist. I can't recall how I did this; I strongly su
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Disabled</key>
-	<false/>
-	<key>EnvironmentVariables</key>
-	<dict>
-		<key>PATH</key>
-		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin</string>
-	</dict>
-	<key>KeepAlive</key>
-	<dict>
-		<key>SuccessfulExit</key>
-		<true/>
-	</dict>
-	<key>Label</key>
-	<string>com.elastic.filebeat</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>/usr/local/bin/filebeat</string>
-		<string>-c</string>
-		<string>/etc/filebeat/filebeat.yml</string>
-	</array>
-	<key>RunAtLoad</key>
-	<true/>
+    <key>Disabled</key>
+    <false/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin</string>
+    </dict>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <true/>
+    </dict>
+    <key>Label</key>
+    <string>com.elastic.filebeat</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/filebeat</string>
+        <string>-c</string>
+        <string>/etc/filebeat/filebeat.yml</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
 </dict>
 </plist>
 ```
@@ -437,13 +437,13 @@ The important parts for me are the `ProgramArguments` portion.
 
 ```xml
 <key>ProgramArguments</key>
-	<array>
-		<string>/usr/local/bin/filebeat</string>
-		<string>-c</string>
-		<string>/etc/filebeat/filebeat.yml</string>
-	</array>
-	<key>RunAtLoad</key>
-	<true/>
+    <array>
+        <string>/usr/local/bin/filebeat</string>
+        <string>-c</string>
+        <string>/etc/filebeat/filebeat.yml</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
 ```
 That's the part that tells Filebeat where to look for the config file and to run at load time. 
 
@@ -454,13 +454,13 @@ filebeatRunning=`sudo launchctl list | grep com.elastic.filebeat`
 
 if [ ! -z "$filebeatRunning" ]; then
   LogScript "Filebeat is running. Stopping in order to install new or updated version."
-	sudo launchctl unload /Library/LaunchDaemons/com.elastic.filebeat.plist
+    sudo launchctl unload /Library/LaunchDaemons/com.elastic.filebeat.plist
   else
-		LogScript "Filebeat does not appear to be running. Proceeding with install."
+        LogScript "Filebeat does not appear to be running. Proceeding with install."
 fi
 ```
 
-The `LogScript` part is from a functions library I use and is inspired by [Rich Trouton's](http://derflounder.wordpress.com) CasperCheck script, which gave me the idea for it.
+The `LogScript` part is from a functions library I use and is inspired by [Rich Trouton's][1] CasperCheck script, which gave me the idea for it.
 
 My post-install script also looks for and unloads the old logstash-forwarder launchdaemon; I'd created this in order to pull logstash-forwarder from some of the early pilot Macs, before logstash-forwarder was replaced by Filebeat.
 
@@ -471,8 +471,8 @@ filebeatRunning=`sudo launchctl list | grep com.elastic.filebeat`
 if [ ! -z "$launchdRunning" ]; then
   LogScript "Logstash-Forwarder existed on this Mac, unloading extension, deleting."
   /bin/launchctl unload -w /Library/LaunchDaemons/com.elastic.logstash-forwarder.plist
-	else
-		LogScript "No Logstash-Forwarder LaunchDaemon running on this Mac."
+    else
+        LogScript "No Logstash-Forwarder LaunchDaemon running on this Mac."
 fi
 
 if [[ -f /Library/LaunchDaemons/com.elastic.logstash-forwarder.plist ]]; then
@@ -507,6 +507,8 @@ I set a higher congestion threshold to allow for hundreds of endpoints. As I clu
 
 Also, SSL is disabled by default, so make sure you have the SSL arguments in there. Security will give you a nasty look (and maybe fire your ass?) if you deploy with in-the-clear transport. Plus, it's just rude not to encrypt.
 
-That's about it. I have ~600+ clients now reporting into my ELK stack, with the final number being around 1400 when we move to production. 
+That's about it. I have \~600+ clients now reporting into my ELK stack, with the final number being around 1400 when we move to production. 
 
 Happy to field any questions; @sohail on Twitter, the MacAdmins, OSQuery, or ITThinkTank Slack teams. 
+
+[1]:	http://derflounder.wordpress.com
