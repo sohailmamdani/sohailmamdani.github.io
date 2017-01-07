@@ -7,9 +7,8 @@ tags: apple,mac,macos,filebeat,osquery
 ---
 
 Got a few questions about the way I've deployed Filebeat to transport OSQuery logs over the past few days, so I thought I'd do a quick writeup about it.
-
-There are a few components to this.
 <!-- more -->
+There are a few components to this.
 - Filebeat executable (the Darwin version)
 - `filebeat.yml` (config file to tell Filebeat where to deliver the logs to)
 - Certificates (for TLS transport, placed in your location of choice)
