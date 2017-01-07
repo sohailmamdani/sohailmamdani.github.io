@@ -196,18 +196,14 @@
 					<integer>2</integer>
 				</dict>
 			</dict>
-			<key>2017-01-06-the-view-from-the-trenches.markdown</key>
+			<key>the-view-from-the-trenches.markdown</key>
 			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>505456245.73945099</real>
 				<key>lastModification</key>
-				<real>505456245.73945099</real>
+				<real>505456267.42040598</real>
 				<key>version</key>
 				<dict>
 					<key>82f248aa52ceb583f80eaa94572281019956ba2189259e8483f1eebf862266cf</key>
-					<integer>10</integer>
+					<integer>11</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -220,7 +216,7 @@
 			<string>2014-04-08-onenote-updated.markdown</string>
 		</array>
 		<array>
-			<string>2017-01-06-the-view-from-the-trenches.markdown</string>
+			<string>the-view-from-the-trenches.markdown</string>
 		</array>
 		<array>
 			<string>2016-06-01-deploying-filebeat-on-macos.markdown</string>
@@ -286,7 +282,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>82f248aa52ceb583f80eaa94572281019956ba2189259e8483f1eebf862266cf</key>
-			<integer>10</integer>
+			<integer>11</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>
