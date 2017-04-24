@@ -1,7 +1,7 @@
 ---
 layout: post
 title: From Jamf to Chef, Part 1
-date: 2017-04-24 15:38 -0700
+date: 2017-04-24 00:38 -0700
 categories: tech
 tags: mac, chef, sysadmin, tech, opensource
 ---
