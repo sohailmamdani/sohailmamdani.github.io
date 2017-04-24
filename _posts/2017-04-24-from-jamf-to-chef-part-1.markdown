@@ -14,7 +14,7 @@ Here then, is a somewhat rambling, somewhat contextualized look at my process fo
 <!-- more -->
 
 ### Context
-If you've been a Mac admin for long enough, you're likely to remember that your job did not really involved spending time in the weeds of a command-line interface. Being a Mac guy was a very visual thing; you had a tendency to scoff at Windows admin who'd drop into the command prompt for their silliness.
+If you've been a Mac admin for long enough, you're likely to remember that your job did not really involved spending time in the weeds of a command-line interface. Being a Mac guy was a very visual thing; you had a tendency to scoff at Windows admins who'd drop into the command prompt for their silliness.
 
 That's the kind of Mac admins that have been in the industry for a long time. The advent of Mac OS X (now macOS) did shift that with its UNIX underpinnings, but Mac admins hung on to their graphical ways for a long time - and still do.
 
@@ -23,7 +23,7 @@ That's the context many of us have operated under. I certainly resisted learning
 Then, about two months into my time as a Jamf admin at eBay, I decided to learn it so I wouldn't feel stupid everytime I went on Jamfnation to ask a question.
 
 ### A Shift in the Ecosystem
-Here's something I realized early on. The visual-centric way of administering a Mac endpoint is a dead-end. Even though being a Jamf admin still means you spend a fair bit of time  with a graphical UI, I don't know a single person in the Jamf community worth their salt who doesn't have a respectable collection of at least Bash scripts. More often than not, like me, a lot of admins have developed custom workflows in Bash, Applescript, Python, whatever, and are just using Jamf as a sort of API framework (sometimes, we even make RESTful calls to the Jamf API).
+Here's something I realized early on: *The visual-centric way of administering a Mac endpoint is a dead-end*. Even though being a Jamf admin still means you spend a fair bit of time  with a graphical UI, I don't know a single person in the Jamf community worth their salt who doesn't have a respectable collection of at least Bash scripts. More often than not, like me, a lot of admins have developed custom workflows in Bash, Applescript, Python, whatever, and are just using Jamf as a sort of API framework (sometimes, we even make RESTful calls to the Jamf API).
 
 So, even though the Jamf system is something of a monolithic black box, by working with the Jamf API and the commands available via the `jamf` binary as a sort of extended API, admins have modularized the Jamf ecosystem.
 
@@ -63,6 +63,6 @@ echo "90 Cleaning up" >&3
 ############ Add Remove computer from Exempt group ###############
 ```
 
-Frayed edges like these drove towards the big change that I was told about during my job interviews.
+Frayed edges like these drove towards the big change that I was told about during my job interview at GoPro.
 
 Coming next: The Sea Change.
