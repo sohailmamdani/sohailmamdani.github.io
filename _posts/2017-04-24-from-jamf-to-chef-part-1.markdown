@@ -27,7 +27,7 @@ Here's something I realized early on: *The visual-centric way of administering a
 
 So, even though the Jamf system is something of a monolithic black box, by working with the Jamf API and the commands available via the `jamf` binary as a sort of extended API, admins have modularized the Jamf ecosystem.
 
-[Rich Trouton's](http://derflounder.com) awesome [CasperCheck](https://github.com/rtrouton/CasperCheck) script is a classic example of this. The Jamf system doesn't have a self-repair mechanism (ffs guys, why _not_?), so Rich built one. In doing so, he taught me the intrinsic value of using functions in Jamf, then further modularizing code by breaking out all commonly used functions into a separate file that can be stowed on every endpoint and merely referenced with a single `source /path/to/file` line at the beginning of your script.
+[Rich Trouton's](http://derflounder.com) awesome [CasperCheck](https://github.com/rtrouton/CasperCheck) script is a classic example of this. The Jamf system doesn't have a self-repair mechanism (ffs guys, why _not_?), so Rich built one. In doing so, he taught me the intrinsic value of using functions in Bash, then further modularizing code by breaking out all commonly used functions into a separate file that can be stowed on every endpoint and merely referenced with a single `source /path/to/file` line at the beginning of your script.
 
 So Rich made this script. I made a custom version of it that also sends me an email every time a computer can't connect to our JSS with a copy of the `jamf.log` and the user's external and internal IP addresses. I also edited it heavily to log additional data to a custom log file so we can pull that into our ELK infrastructure.
 
