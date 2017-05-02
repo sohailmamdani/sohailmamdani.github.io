@@ -41,9 +41,11 @@ I needed a starting point. So I reached out to some really awesome guys at the C
 
 In that conversation, the most important and relevant question I asked was, "I'm a Jamf admin. Tell me what I need to change about my mindset as we move forward with this project."
 
-That set Nate and Mike back a bit. They took a few minutes to answer. I don't recall the exact words, but here's the gist of what I remember: "Forget what you know as a Jamf admin. There are a lot of bad habits to unlearn. Come at this from the perspective of learning something completely new."
+That set Nate and Mike back a bit. They took a few seconds to answer. I don't recall the exact words, but here's the gist of what I remember: "Forget what you know as a Jamf admin. There are a lot of bad habits to unlearn. Come at this from the perspective of learning something completely new."
 
 There was more, but I don't recall all of it. I may have been too busy visualizing all of the value of my past experience slowly circling the drain.
+
+Oh - Mike said something about idempotence. I remember that too.
 
 That's a freaking sea change if ever there is one.
 
@@ -62,6 +64,8 @@ Things I learned:
 - Chef is NOT a replacement for Jamf.
 - Chef IS a replacement for some of the components of Jamf.
 
+##### So wait - what does Chef do, exactly?
+
 Chef describes itself as an "infrastructure automation" system. Here's how they describe it:
 
 > Whether you have five or five thousand servers, Chef lets you manage them all by turning infrastructure into code. Infrastructure described as code is flexible, versionable, human-readable, and testable. Whether your infrastructure is in the cloud, on-premises or in a hybrid environment, you can easily and quickly adapt to your business’s changing needs with Chef.
@@ -70,8 +74,70 @@ Translation: Chef automates process of setting up and configuring your servers (
 
 What does that mean for Macs?
 
-Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "Infrastructure Automation" in Chefspeak translates to "Configuration Management" when you're talking about endpoints.
+Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "Infrastructure Automation" in Chefspeak translates to "Configuration Management" when you're talking about endpoints. Which translates into those wonderful things called Configuration Profiles on the Mac.
+
+The beauty of config profiles on a Mac is that in reality, they're just text files, like this one, formwatted as XML:
+
+````XML
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <dict>
+      <key>PayloadIdentifier</key>
+      <string>com.company.chrome.setting</string>
+      <key>PayloadRemovalDisallowed</key>
+      <false />
+      <key>PayloadScope</key>
+      <string>System</string>
+      <key>PayloadType</key>
+      <string>Configuration</string>
+      <key>PayloadUUID</key>
+      <string>UUIDHERE</string>
+      <key>PayloadOrganization</key>
+      <string>GoPro IT CES</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadDisplayName</key>
+      <string>Set Home Page</string>
+      <key>PayloadContent</key>
+      <array>
+         <dict>
+            <key>PayloadType</key>
+            <string>com.apple.ManagedClient.preferences</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.gopro.something.UUIDHERE</string>
+            <key>PayloadUUID</key>
+            <string>UUIDHERE</string>
+            <key>PayloadEnabled</key>
+            <true />
+            <key>PayloadDisplayName</key>
+            <string>Google Chrome</string>
+            <key>PayloadContent</key>
+            <dict>
+               <key>com.google.Chrome</key>
+               <dict>
+                  <key>Forced</key>
+                  <array>
+                     <dict>
+                        <key>mcx_preference_settings</key>
+                        <dict>
+                           <key>HomepageLocation</key>
+                              <string>http://gopro.okta.com</string>
+                        </dict>
+                     </dict>
+                  </array>
+               </dict>
+            </dict>
+         </dict>
+      </array>
+   </dict>
+</plist>
+````
+Since it's a text file, guess what? It can be controlled by Chef.
+
+What else? A while back I wrote about deploying [Filebeat on a Mac]() to collect logs and ship them to a central logging server. 
 
 
-
-[seachange]: https://lowlyadmin.com/img/sealegs.gif
+[seachange]: http://lowlyadmin.com/img/sealegs.gif
