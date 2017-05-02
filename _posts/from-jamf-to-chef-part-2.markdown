@@ -39,7 +39,7 @@ Now here I was at GoPro and that I was going to have to make good on that idea i
 
 I needed a starting point. So I reached out to some really awesome guys at the Client Platform Engineering team at Facebook. They invited me and my boss over for lunch and we had a good, long chat about our plans.
 
-In that conversation, the most important and relevant question I asked was, "I'm a Jamf admin. Tell me what I need to change about my mindset as we move forward with this project."
+In that conversation, one of the most important and relevant questions I asked was, "I'm a Jamf admin. Tell me what I need to change about my mindset as we move forward with this project."
 
 That set Nate and Mike back a bit. They took a few seconds to answer. I don't recall the exact words, but here's the gist of what I remember: "Forget what you know as a Jamf admin. There are a lot of bad habits to unlearn. Come at this from the perspective of learning something completely new."
 
@@ -64,6 +64,8 @@ Things I learned:
 - Chef is *NOT* a replacement for Jamf.
 - Chef *IS* a replacement for some of the components of Jamf.
 
+Let me expound on that a bit. If you're expecting Chef to do EVERYTHING that Jamf does - MDM, software installation and patching, provide a Self Service-like app store, all of that, then you'll be disappointed. That's not the best way to leverage Chef's strengths.
+
 ##### So wait - what does Chef do, exactly?
 
 Chef describes itself as an "infrastructure automation" system. Here's how they describe it:
@@ -76,7 +78,7 @@ What does that mean for Macs?
 
 Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "Infrastructure Automation" in Chefspeak translates to "Configuration Management" when you're talking about endpoints. Which translates into those wonderful things called Configuration Profiles on the Mac.
 
-The beauty of config profiles on a Mac is that in reality, they're just text files, like this one, formwatted as XML:
+The beauty of config profiles on a Mac is that in reality, they're just text files, like this one that sets some Chrome preferences, formwatted as XML:
 
 ````XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -138,6 +140,8 @@ The beauty of config profiles on a Mac is that in reality, they're just text fil
 Since it's a text file, guess what? It can be controlled by Chef.
 
 What else? A while back I wrote about deploying [Filebeat on a Mac](http://lowlyadmin.com/mac/2016/06/02/deploying-filebeat-on-macos/) to collect logs and ship them to a central logging server. Well, the configuration for that - and even the binary, really - can be deployed via Chef.
+
+You can also use Chef to set any static preference plist files (such as a Dock plist in the User Templates folder), set up launchdaemons, and even bootstrap Munki, which wil provide the software installation and patching features you would need in place of Jamf.
 
 ~~In fact, if you wanted to get really fancy, you could leverage Ohai and write custom data as tags to the `filebeat.yml` config file and workaround a pesky bug in Filebeat that sometimes fails to accurately report the computer's hostname~~ Let's not get ahead of ourselves, mmkay?
 
