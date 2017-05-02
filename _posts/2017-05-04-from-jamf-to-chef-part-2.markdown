@@ -74,4 +74,4 @@ Well, here's how I see it - and y'all should feel free to tell me how wrong I am
 
 
 
-[seachange]: https://lowlyadmin.com/img/seachange.gif
+[seachange]: https://lowlyadmin.com/img/sealegs.gif
