@@ -51,7 +51,7 @@ Welp, there was nothing to it. I just got to it.
 
 #### Finding my sea legs
 
-
+![][seachange]
 
 (I'm awesome at bad analogies but I think this series of nautical-themed ones are working so far. Inevitably, I'll take it too far.)
 
@@ -71,3 +71,7 @@ Translation: Chef automates process of setting up and configuring your servers (
 What does that mean for Macs?
 
 Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "Infrastructure Automation" in Chefspeak translates to "Configuration Management" when you're talking about endpoints.
+
+
+
+[seachange]: https://lowlyadmin.com/img/seachange.gif
