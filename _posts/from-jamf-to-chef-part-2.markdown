@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From Jamf to Chef, Part 2: The Sea Change
+title: From Jamf to Chef, Part 2 - The Sea Change (and figuring out a few basics)
 date: 2017-05-04 00:38 -0700
 categories: tech
 tags: mac, chef, sysadmin, tech, opensource
@@ -19,7 +19,7 @@ Oh boy. Here we go.
 
 #### But first: Setting the stage and the timeframe for all this
 
-Here's the deal with these blog posts: they're sort of happening in near-real-time. There's some history from the last six months or so, but most of this is happening *as I write this*. I'm learning Chef as I write these posts. I'm learning Ruby as I type in Atom. I'm realizing just how much I don't effing know as I watch words appear in Atom.
+Here's the deal with these blog posts: they're sort of happening in near-real-time. There's some history from the last six months or so, but most of this is happening *as I write this*. I'm learning Chef as I write these posts. I'm learning Ruby as I type these words out. I'm realizing just how much I don't effing know as I commit these posts to my Github repo.
 
 We have until the end of this year to implement Chef/Munki/Chocolaty/Imagr/MicroMDM/<insert your favorite open source management system here>. That's when our Jamf license expires. We would've done it sooner, but I was derailed by the rollout of our logging infrastructure, which is now complete for all Macs (and which will be the subject of another series of blog posts, I guess).
 
@@ -61,8 +61,8 @@ The first thing on my agenda after coming back from eating tacos and ice cream a
 
 Things I learned:
 
-- Chef is NOT a replacement for Jamf.
-- Chef IS a replacement for some of the components of Jamf.
+- Chef is *NOT* a replacement for Jamf.
+- Chef *IS* a replacement for some of the components of Jamf.
 
 ##### So wait - what does Chef do, exactly?
 
@@ -137,7 +137,17 @@ The beauty of config profiles on a Mac is that in reality, they're just text fil
 ````
 Since it's a text file, guess what? It can be controlled by Chef.
 
-What else? A while back I wrote about deploying [Filebeat on a Mac]() to collect logs and ship them to a central logging server. 
+What else? A while back I wrote about deploying [Filebeat on a Mac](http://lowlyadmin.com/mac/2016/06/02/deploying-filebeat-on-macos/) to collect logs and ship them to a central logging server. Well, the configuration for that - and even the binary, really - can be deployed via Chef.
+
+~~In fact, if you wanted to get really fancy, you could leverage Ohai and write custom data as tags to the `filebeat.yml` config file and workaround a pesky bug in Filebeat that sometimes fails to accurately report the computer's hostname~~ Let's not get ahead of ourselves, mmkay?
+
+##### So wait - Chef doesn't install applications and stuff?
+
+Well, it *can*, but that sort of thing is better left to a tool like Munki. This is what I've come to understand and what brings me back to my one of the two points I made above: Chef is *NOT* a total replacement for Jamf, and Chef *IS* a replacement for some of the components of Jamf.
+
+Okay, we've figured out what Chef can and ~~cannot~~ should not do. Now, how do we go about doing it?
+
+I did say this would be a 492-part series, right?
 
 
 [seachange]: http://lowlyadmin.com/img/sealegs.gif
