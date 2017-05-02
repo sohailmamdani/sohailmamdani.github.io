@@ -21,7 +21,7 @@ Oh boy. Here we go.
 
 Here's the deal with these blog posts: they're sort of happening in near-real-time. There's some history from the last six months or so, but most of this is happening *as I write this*. I'm learning Chef as I write these posts. I'm learning Ruby as I type these words out. I'm realizing just how much I don't effing know as I commit these posts to my Github repo.
 
-We have until the end of this year to implement Chef/Munki/Chocolaty/Imagr/MicroMDM/<insert your favorite open source management system here>. That's when our Jamf license expires. We would've done it sooner, but I was derailed by the rollout of our logging infrastructure, which is now complete for all Macs (and which will be the subject of another series of blog posts, I guess).
+We have until the end of this year to implement Chef/Munki/Chocolaty/Imagr/MicroMDM/&lt;insert your favorite open source management system here&gt;. That's when our Jamf license expires. We would've done it sooner, but I was derailed by the rollout of our logging infrastructure, which is now complete for all Macs (and which will be the subject of another series of blog posts, I guess).
 
 So, we're now back to Chef. And my panicked realization that I have a LOT of learning to do.
 
@@ -78,7 +78,7 @@ What does that mean for Macs?
 
 Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "Infrastructure Automation" in Chefspeak translates to "Configuration Management" when you're talking about endpoints. Which translates into those wonderful things called Configuration Profiles on the Mac.
 
-The beauty of config profiles on a Mac is that in reality, they're just text files, like this one that sets some Chrome preferences, formwatted as XML:
+The beauty of config profiles is that in reality, they're just text files, like this one that sets some Chrome preferences, formwatted as XML:
 
 ````XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -96,7 +96,7 @@ The beauty of config profiles on a Mac is that in reality, they're just text fil
       <key>PayloadUUID</key>
       <string>UUIDHERE</string>
       <key>PayloadOrganization</key>
-      <string>GoPro IT CES</string>
+      <string>Company IT CES</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
       <key>PayloadDisplayName</key>
@@ -109,7 +109,7 @@ The beauty of config profiles on a Mac is that in reality, they're just text fil
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>PayloadIdentifier</key>
-            <string>com.gopro.something.UUIDHERE</string>
+            <string>com.company.something.UUIDHERE</string>
             <key>PayloadUUID</key>
             <string>UUIDHERE</string>
             <key>PayloadEnabled</key>
@@ -126,7 +126,7 @@ The beauty of config profiles on a Mac is that in reality, they're just text fil
                         <key>mcx_preference_settings</key>
                         <dict>
                            <key>HomepageLocation</key>
-                              <string>http://gopro.okta.com</string>
+                              <string>http://company.okta.com</string>
                         </dict>
                      </dict>
                   </array>
@@ -141,7 +141,7 @@ Since it's a text file, guess what? It can be controlled by Chef.
 
 What else? A while back I wrote about deploying [Filebeat on a Mac](http://lowlyadmin.com/mac/2016/06/02/deploying-filebeat-on-macos/) to collect logs and ship them to a central logging server. Well, the configuration for that - and even the binary, really - can be deployed via Chef.
 
-You can also use Chef to set any static preference plist files (such as a Dock plist in the User Templates folder), set up launchdaemons, and even bootstrap Munki, which wil provide the software installation and patching features you would need in place of Jamf.
+You can also use Chef to set any static preference plist files (such as a Dock plist in the User Templates folder), set up launchdaemons, and even bootstrap Munki, which will provide the software installation and patching features you would need in place of Jamf.
 
 ~~In fact, if you wanted to get really fancy, you could leverage Ohai and write custom data as tags to the `filebeat.yml` config file and workaround a pesky bug in Filebeat that sometimes fails to accurately report the computer's hostname~~ Let's not get ahead of ourselves, mmkay?
 
