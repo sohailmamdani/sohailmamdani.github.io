@@ -1,7 +1,7 @@
 ---
 layout: post
 title: From Jamf to Chef, Part 2 - The Sea Change (and figuring out a few basics)
-date: 2017-05-04 00:38 -0700
+date: 2017-05-04 17:00 -0700
 categories: tech
 tags: mac, chef, sysadmin, tech, opensource
 ---
