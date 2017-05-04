@@ -35,11 +35,11 @@ In [Part 1](http://lowlyadmin.com/tech/2017/04/24/from-jamf-to-chef-part-1/) of 
 
 > The visual-centric way of administering a Mac endpoint is a dead-end.
 
-Now here I was at GoPro and that I was going to have to make good on that idea in the most complete way imaginable.
+Now here I was at GoPro and I was going to have to make good on that idea in the most complete way imaginable.
 
 I needed a starting point. So I reached out to some really awesome guys at the Client Platform Engineering team at Facebook. They invited me and my boss over for lunch and we had a good, long chat about our plans.
 
-In that conversation, one of the most important and relevant questions I asked was, "I'm a Jamf admin. Tell me what I need to change about my mindset as we move forward with this project."
+In that conversation, one of the most important and relevant questions I asked Mike Dodge and Nate Walck was this: "I'm a Jamf admin. Tell me what I need to change about my mindset as we move forward with this project."
 
 That set Nate and Mike back a bit. They took a few seconds to answer. I don't recall the exact words, but here's the gist of what I remember: "Forget what you know as a Jamf admin. There are a lot of bad habits to unlearn. Come at this from the perspective of learning something completely new."
 
@@ -76,9 +76,9 @@ Translation: Chef automates process of setting up and configuring your servers (
 
 What does that mean for Macs?
 
-Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "Infrastructure Automation" in Chefspeak translates to "Configuration Management" when you're talking about endpoints. Which translates into those wonderful things called Configuration Profiles on the Mac.
+Well, here's how I see it - and y'all should feel free to tell me how wrong I am. "*Infrastructure Automation*" in Chefspeak translates to "*Configuration Management*" when you're talking about endpoints. Which translates into those wonderful things called *Configuration Profiles* on the Mac.
 
-The beauty of config profiles is that in reality, they're just text files, like this one that sets some Chrome preferences, formwatted as XML:
+The beauty of config profiles is that in reality, they're just text files, like this one that sets some Chrome preferences, formatted as XML:
 
 ````XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -152,6 +152,8 @@ Well, it *can*, but that sort of thing is better left to a tool like Munki. This
 Okay, we've figured out what Chef can and ~~cannot~~ should not do. Now, how do we go about doing it?
 
 I did say this would be a 492-part series, right?
+
+*Note: Many many thanks to Mike Dodge, Nate Walck, and Nick McSpadden for their help through this process. The Facebook CPE team's [GitHub repo](https://github.com/facebook/IT-CPE) should be required reading for anyone planning the adoption of Chef.
 
 
 [seachange]: http://lowlyadmin.com/img/sealegs.gif
