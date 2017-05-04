@@ -16,6 +16,7 @@ This was day two of my employment at GoPro, and Darren, my boss, was explaining 
 2. My time as a Jamf admin is nearing its end.
 
 Oh boy. Here we go.
+<!-- more -->
 
 #### But first: Setting the stage and the timeframe for all this
 
