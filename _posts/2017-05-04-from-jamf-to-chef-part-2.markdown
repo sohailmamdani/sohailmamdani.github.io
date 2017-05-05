@@ -81,7 +81,7 @@ Well, here's how I see it - and y'all should feel free to tell me how wrong I am
 
 The beauty of config profiles is that in reality, they're just text files, like this one that sets some Chrome preferences, formatted as XML:
 
-```XML
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
