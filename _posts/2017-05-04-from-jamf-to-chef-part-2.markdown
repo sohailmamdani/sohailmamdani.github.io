@@ -81,7 +81,7 @@ Well, here's how I see it - and y'all should feel free to tell me how wrong I am
 
 The beauty of config profiles is that in reality, they're just text files, like this one that sets some Chrome preferences, formatted as XML:
 
-````XML
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -137,7 +137,7 @@ The beauty of config profiles is that in reality, they're just text files, like 
       </array>
    </dict>
 </plist>
-````
+```
 Since it's a text file, guess what? It can be controlled by Chef.
 
 What else? A while back I wrote about deploying [Filebeat on a Mac](http://lowlyadmin.com/mac/2016/06/02/deploying-filebeat-on-macos/) to collect logs and ship them to a central logging server. Well, the configuration for that - and even the binary, really - can be deployed via Chef.
