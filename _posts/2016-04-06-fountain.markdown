@@ -28,4 +28,4 @@ Score one more for iPad productivity.
 [7]:	http://fountain.io/_downloads/fountain-reference.pdf
 [8]:	https://appsto.re/us/oanvU.i
 
-[image-1]:	http://lowlyadmin.com/img/2016-04-06-textastic.png
+[image-1]:	http://sohailmamdani.github.io/img/2016-04-06-textastic.png
