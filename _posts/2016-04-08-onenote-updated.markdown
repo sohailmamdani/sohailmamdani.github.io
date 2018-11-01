@@ -39,4 +39,4 @@ Well hot damn.
 [1]:	http://lowlyadmin.com/apple/2016/03/31/babypro-bigpro/
 [2]:	http://onenote.com
 
-[image-1]:	http://lowlyadmin.com/img/2014-04-09-onenote-updated.png
+[image-1]:	http://sohailmamdani.github.io/img/2014-04-09-onenote-updated.png
