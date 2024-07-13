@@ -10,7 +10,7 @@ tags: tech,blogging,markdown,apps,mac
 
 I have a problem. I'm constantly trying to find one new Markdown app after the other. Now I've got a new one I'm trying.
 
-<img src="img/lightpaper.png" width="800px" />
+<img src="https://sohailmamdani.github.io/img/lightpaper.png" width="800px" />
 
 [LightPaper](http://lightpaper.42squares.in) isn't without its quirks (trying to figure out why it won't show my Jekyll header as a table for this post when it does for all the rest, for example), but so far, it's kind of checking off the most important points for me.
 

@@ -1,10 +1,10 @@
 # Site settings
-title: The Lowly Admin
+title: sohail.tech
 header-img: img/home-bg.jpg
-email: sohail@me.com
-description: "Geek. GoPro employee with a secret identity."
+email: sm@sohail.me
+description: "Geek. Tech employee with a secret identity."
 baseurl: ""
-url: "http://lowlyadmin.com"
+url: "http://sohail.tech"
 twitter_username: sohail
 github_username:  sohailmamdani
 
