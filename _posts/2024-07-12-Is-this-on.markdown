@@ -1,0 +1,9 @@
+---
+layout: post
+title: Is this on?
+date: 2024-07-12 17:00 -0700
+categories: tech
+tags: tech
+---
+
+Is this on? Just checking. It's been a minute.
