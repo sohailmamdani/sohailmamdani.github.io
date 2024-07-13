@@ -52,8 +52,8 @@ Even though I'm surprised to see these items in an Apple Store, it's also somewh
 [4]:	http://www.apple.com/apple-pencil/
 [5]:	https://www.fiftythree.com/pencil
 
-[image-1]:	img/2016-04-08-drones.jpg
-[image-2]:	img/2016-04-08-drones2.jpg
-[image-3]:	img/2016-04-08-dropcam.jpg
-[image-4]:	img/2016-04-08-sous-vide.jpg
-[image-5]:	img/2016-04-08-pencil.jpg
+[image-1]:	https://sohailmamdani.github.io/img/2016-04-08-drones.jpg
+[image-2]:	https://sohailmamdani.github.io/img/2016-04-08-drones2.jpg
+[image-3]:	https://sohailmamdani.github.io/img/2016-04-08-dropcam.jpg
+[image-4]:	https://sohailmamdani.github.io/img/2016-04-08-sous-vide.jpg
+[image-5]:	https://sohailmamdani.github.io/img/2016-04-08-pencil.jpg
