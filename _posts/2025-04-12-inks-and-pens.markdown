@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inks and Pens?
+title: Inks and Pens
 date: 2025-04-12 14:00 -0700
 categories: analog
 tags: pens,inks,analog
