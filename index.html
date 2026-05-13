@@ -1,61 +1,94 @@
----
-layout: page
-description: ""
-header-img: "img/main_bg.jpg"
----
+<!doctype html>
+<html lang="en">
 <head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<meta charset="utf-8">
+<title>Sohail Mamdani</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Sohail Mamdani — IT Systems Engineering and Technology Integrations at Verily/Alphabet. Twenty years of platform &amp; infra; lately, AI tooling.">
+<link rel="canonical" href="https://sohail.tech/">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
 
-  ga('create', 'UA-77249500-1', 'auto');
-  ga('send', 'pageview');
+<header class="masthead">
+  <h1>Sohail Mamdani</h1>
+  <p class="lede">I run the IT Systems Engineering and Technology Integrations team at <a href="https://verily.com">Verily</a>/Alphabet. Twenty years of building the platforms that real companies run on &mdash; and lately, the tools for AI agents to run alongside them.</p>
+</header>
 
-</script>
-<script src="https://use.typekit.net/yts4psp.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script></head>
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-    <section>
- <div class="post-content-truncate">
-  {% if post.content contains "<!-- more -->" %}
-    {{ post.content | split:"<!-- more -->" | first % }}
-    <br />
-    <a href="{{ post.url | prepend: site.baseurl }}">Read more... </a>
-  {% else %}
-    {{ post.content}}
-    
-  {% endif %}
-</div>
-   </section>
-</div>
-<hr>
-{% endfor %}
+<section id="shipping">
+  <h2>Currently shipping</h2>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  <article>
+    <h3><a href="https://github.com/sohailmamdani/livery">Livery</a></h3>
+    <p class="kicker">Local, single-user harness for running a small AI company.</p>
+    <p>Markdown and git &mdash; no database, no server, no cloud. Hire agents (Claude Code, Codex, Cursor, local Ollama or LM Studio models), file tickets, dispatch work, close the loop, all from the terminal. Multi-runtime by design: adding a new adapter is about thirty lines of Python. Pre-1.0, MIT-licensed.</p>
+  </article>
+
+  <article>
+    <h3><a href="https://github.com/sohailmamdani/scribe">Scribe</a></h3>
+    <p class="kicker">Native macOS dictation that runs entirely on your machine.</p>
+    <p>Press a global hotkey, speak, release &mdash; your words are transcribed locally with WhisperKit and pasted into whatever app is in front of you. No cloud, no account, no upload, no telemetry. macOS 14+, Apple Silicon recommended.</p>
+  </article>
+</section>
+
+<section id="track-record">
+  <h2>Track record</h2>
+  <ol class="timeline">
+    <li>
+      <span class="when">2024&ndash;</span>
+      <span class="what"><strong>Verily / Alphabet</strong> &mdash; Sr. IT Engineering Manager. Run the SETI (Systems Engineering / Technology Integrations) team. Device management, SaaS, identity ops, AI and agentic workflows. Report into the CIO.</span>
     </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    <li>
+      <span class="when">2022&ndash;2024</span>
+      <span class="what"><strong>Airtable</strong> &mdash; IT Engineering Manager. Rebuilt the team after sustained turnover; overhauled the stack (Okta Classic &rarr; OIE, Slack &rarr; Enterprise Grid); stood up an in-IT software-development function building on Airtable itself.</span>
     </li>
-    {% endif %}
-</ul>
-{% endif %}
+    <li>
+      <span class="when">2018&ndash;2022</span>
+      <span class="what"><strong>Helix</strong> &mdash; IT Manager. Ran the help desk and most of corporate IT. Engineered a patching system that cut corporate CVEs by 60%. Supported InfoSec in rolling out Mimecast, Netskope, and CrowdStrike.</span>
+    </li>
+    <li>
+      <span class="when">2016&ndash;2018</span>
+      <span class="what"><strong>GoPro</strong> &mdash; Manager, Client Engineering. Joined as a Sr. IT Engineer (macOS endpoint), promoted to manager. Moved IT Engineering to Agile, migrated Mac management to AWS, built out the client engineering team.</span>
+    </li>
+    <li>
+      <span class="when">2015&ndash;2016</span>
+      <span class="what"><strong>Box</strong> &mdash; Sr. IT Systems Engineer. Led the macOS side of IT Engineering. Tripled imaging throughput with Casper; piloted DEP and an OSQuery + ELK stack that became the basis of how Box ran IT ops and InfoSec.</span>
+    </li>
+    <li>
+      <span class="when">2013&ndash;2015</span>
+      <span class="what"><strong>Amazon Lab126</strong>, <strong>KIXEYE</strong>, <strong>Informatica</strong> &mdash; field test and Mac-systems contract work; digital imaging QA, Casper rollouts, retooled imaging and AD-based auth.</span>
+    </li>
+    <li>
+      <span class="when">2011&ndash;2013</span>
+      <span class="what"><strong>eBay</strong> &mdash; Systems Administrator. Strategy and tooling for Mac deployment and management worldwide; coordinated across US, Germany, Turkey, India, China, and Australia.</span>
+    </li>
+    <li>
+      <span class="when">2008&ndash;2011</span>
+      <span class="what"><strong>Apple</strong> &mdash; Systems Administrator. Designed and deployed the server architecture behind the apps used in all 300+ Apple Retail Stores; tier-3 support; scaled one of the most-used Retail apps to 3&times; capacity and halved its support volume.</span>
+    </li>
+  </ol>
+  <p class="aside">Full r&eacute;sum&eacute;: <a href="/Sohail_Mamdani_Resume_2026.pdf">PDF</a>.</p>
+</section>
+
+<section id="notes">
+  <h2>Notes</h2>
+  <p>Occasional writing on systems, IT engineering, and AI tooling. Not a blog &mdash; no cadence, no archive, no RSS. Just things worth keeping around.</p>
+  <p><a href="/notes/">All notes &rarr;</a></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <ul class="contact">
+    <li><a href="mailto:sm@sohail.me">sm@sohail.me</a></li>
+    <li><a href="https://github.com/sohailmamdani">github.com/sohailmamdani</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; Sohail Mamdani</p>
+</footer>
+
+</main>
+</body>
+</html>
