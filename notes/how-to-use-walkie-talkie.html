@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Use Walkie-Talkie &mdash; Sohail Mamdani</title>
+<meta name="description" content="A practical guide to using Livery Walkie-Talkie: starting a walkie file, running the auto controller, briefings, signatures, and what to do when a debate stalls.">
+<link rel="canonical" href="https://sohail.tech/notes/how-to-use-walkie-talkie.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400;1,8..60,500&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="topline">
+    <span><span class="dot"></span><a href="/">sohail.tech</a> / <a href="/notes/">notes</a></span>
+    <span>2026 &middot; 05</span>
+  </div>
+
+  <header class="lede">
+    <h1>How to Use Walkie-Talkie</h1>
+    <p>Here's how to use Walkie-Talkie to let two AI sessions argue their way to an answer.</p>
+  </header>
+
+  <section class="row">
+    <div class="label">Note</div>
+    <div class="body">
+      <div class="prose">
+
+        <p><a href="https://github.com/sohailmamdani/livery">Livery</a> has a feature called Walkie-Talkie. It gives two AI sessions one markdown file and asks them to argue their way to an answer.</p>
+
+        <p>If you read <a href="/notes/letting-two-ais-argue-without-you.html">Letting Two AIs Argue Without You</a>, that was the why. This is the how.</p>
+
+        <p>The short version: start with a briefing, pick two peers, let them take turns, and stop when both have signed. The file is the artifact. Livery has the machinery for making the turns happen.</p>
+
+        <h2>The setup</h2>
+
+        <p>Livery is a local command-line framework for running AI agents in a workspace. A workspace is just a directory with tickets, hired agents, conventions, and state. Walkie-Talkie lives inside that workspace.</p>
+
+        <p>There are two commands to know:</p>
+
+        <ul>
+          <li><code>livery walkie new</code>, which creates the shared file so you can pass it between two already-running AI sessions.</li>
+          <li><code>livery walkie auto</code>, which runs the controller and dispatches two hired agents until the debate locks or stops.</li>
+        </ul>
+
+        <p>Use <code>new</code> when you want to stay in the loop. Use <code>auto</code> when the mechanical part should go away.</p>
+
+        <h2>Starting the file yourself</h2>
+
+        <p>Use <code>livery walkie new</code> when you have two sessions already running. Claude Code in one terminal, Codex in another, for example. You want a structured debate, but you still want to drive who reads what and when.</p>
+
+<pre><code>$ livery walkie new "rate-limiter-design" \
+    --with codex \
+    --as claude-code \
+    --opener "Should we use token bucket or leaky bucket here? Constraints: ..."
+</code></pre>
+
+        <p>That creates a file in the workspace:</p>
+
+<pre><code>walkie-talkie/rate-limiter-design.md
+</code></pre>
+
+        <p>The bottom of the file contains the protocol. The important rules are simple: read the whole file before every turn, append one turn above the protocol marker, push back if the other side is wrong, and sign only when the answer is actually settled.</p>
+
+        <p>If you pass <code>--opener</code>, Turn 1 is already there. If you do not, the file starts with the protocol and the first AI writes Turn 1.</p>
+
+        <p>Then you hand it to the other session:</p>
+
+        <blockquote>
+          Open <code>walkie-talkie/rate-limiter-design.md</code>, read the whole file, follow the protocol at the bottom, and take your turn.
+        </blockquote>
+
+        <p>The peer appends Turn 2. You tell the first session to read the file again and take Turn 3. Repeat until both sides sign.</p>
+
+        <p>You can check the state from the workspace:</p>
+
+<pre><code>$ livery walkie list
+</code></pre>
+
+        <p>And if you need to inspect one without opening the file directly:</p>
+
+<pre><code>$ livery walkie show rate-limiter-design
+</code></pre>
+
+        <h2>Running the controller</h2>
+
+        <p><code>livery walkie auto</code> does all this without you babysitting the turns. You need two hired agents in the workspace first:</p>
+
+<pre><code>$ livery hire proposer
+$ livery hire critic
+</code></pre>
+
+        <p>Hiring is where an agent gets its identity, runtime, model, working directory, and system prompt. You only do it once per agent. After that, the agent is part of the workspace.</p>
+
+        <p>Then run the controller:</p>
+
+<pre><code>$ livery walkie auto "rate-limiter-design" \
+    --peer-a proposer \
+    --peer-b critic \
+    --briefing "We need to pick between token bucket and leaky bucket. Constraints: ..."
+</code></pre>
+
+        <p>Livery creates the walkie file, dispatches <code>proposer</code> for Turn 1, waits for that turn to land, dispatches <code>critic</code> for Turn 2, and keeps alternating. The loop stops when both peers sign, when a runtime fails, when a peer runs but does not append a turn, when a turn times out, or when the debate hits <code>--max-turns</code>. The default ceiling is 20 turns.</p>
+
+        <p>If you already have the briefing in a file, pass it by path:</p>
+
+<pre><code>$ livery walkie auto "rate-limiter-design" \
+    --peer-a proposer \
+    --peer-b critic \
+    --briefing @briefings/rate-limiter.md
+</code></pre>
+
+        <p>If the topic in question already lives in a Livery ticket, attach the ticket too:</p>
+
+<pre><code>$ livery walkie auto "rate-limiter-design" \
+    --peer-a proposer \
+    --peer-b critic \
+    --ticket LIV-123 \
+    --briefing @briefings/rate-limiter.md
+</code></pre>
+
+        <p>The briefing and the ticket content become constant context for each turn. The walkie file is the evolving transcript.</p>
+
+        <p>If the controller stops and the file is still usable, resume it:</p>
+
+<pre><code>$ livery walkie auto "rate-limiter-design" \
+    --peer-a proposer \
+    --peer-b critic \
+    --resume
+</code></pre>
+
+        <p><code>--resume</code> picks up the existing file and continues from the next turn.</p>
+
+        <h2>The briefing</h2>
+
+        <p>The briefing is the part you want to spend a bit of time on. It is the distilled statement of what the debate is about: the question, the options, the constraints, and the things you have already decided.</p>
+
+        <p>Keep it short. Three or four hundred words is usually enough. Long enough to keep the AIs from drifting, short enough that both peers can re-read it every turn without swimming through a ton of context (which can dump you into the realm of context rot).</p>
+
+        <p>A useful briefing usually includes:</p>
+
+        <ul>
+          <li>The exact decision being made.</li>
+          <li>The real options on the table.</li>
+          <li>The constraints that matter (technical, time, scope, people, risk).</li>
+          <li>The decisions that are already closed and should not be relitigated.</li>
+          <li>What kind of answer you need at the end.</li>
+        </ul>
+
+        <p>Skipping the briefing is how you get a very confident debate that might have absolutely nothing to do with the question.</p>
+
+        <h2>The ending</h2>
+
+        <p>A walkie locks when both peers sign. The line looks like this:</p>
+
+<pre><code>SIGNED: critic @ 2026-05-14T18:42:01Z
+</code></pre>
+
+        <p>A signed file is the record of the argument: what was proposed, what got challenged, what changed, and where the peers finally converged.</p>
+
+        <p>When the controller runs the debate, each turn is also a dispatch attempt with its own audit record under <code>.livery/dispatch/attempts/</code>. If (when?) something goes sideways, you can see which peer ran, when it ran, whether it exited cleanly, and what it printed.</p>
+
+        <h2>Failure modes</h2>
+        <ol>
+        <li><p>The first common failure usually looks like drift. The peers debate something close to your question but not quite your question. That is usually a briefing problem.</p></li>
+
+        <li><p>The second failure is role collapse. If both peers are trying to be helpful in the same way, they will usually converge too early. Two generalist assistants will often summarize each other, smooth over uncertainty, and call the plan good before the hard objections have been tested.</p>
+
+        <p>The fix is to give the peers different jobs. One can be responsible for making the strongest practical proposal; the other can be responsible for finding the places it breaks. Or one can argue from product value while the other argues from security, operations, cost, data integrity, or long-term maintenance. Each hired agent has its own prompt files in the workspace, and those prompts define how it should behave when Livery dispatches it. If you want a useful Walkie-Talkie pair, do not hire two generic assistants. Hire two agents with different charters.</p>
+
+        <pre><code>
+        $ livery hire proposer
+        $ livery hire critic
+        </code></pre>
+        
+        <p>Then make the distinction explicit in each agent&rsquo;s instructions. The proposer&rsquo;s prompt might say: your job is to produce the strongest workable plan, make tradeoffs explicit, and avoid getting stuck in abstract objections. The critic&rsquo;s prompt might say: your job is to look for failure modes, hidden assumptions, operational risk, security risk, and places where the proposal is too vague to implement.</p>
+        
+        <p>You can do the same with domain roles. A product-minded peer should ask whether the decision solves the right user problem. A security-minded peer should ask how it can be abused. An operations-minded peer should ask how it fails at 2 a.m. A database-minded peer should ask what happens to consistency, migration, and recovery. Walkie-Talkie does not create that tension by itself. It preserves and runs the tension you put into the agents.</p>
+
+        <p>Good pairings are usually asymmetric: proposer and critic, builder and auditor, product and security, database and operations, senior and junior. The junior role is useful because it can ask naive questions without trying to sound authoritative. The auditor role is useful because it is allowed to be annoying. The names matter less than the pressure they create.</p></li>
+
+        <li><p>The third failure is babysitting a hand-driven walkie. If you are relying on long-running sessions to notice file changes on their own, one side will eventually miss an update and sit there doing nothing. That is why <code>livery walkie auto</code> exists. It turns each turn into a bounded dispatch, then shuts the peer down until the next one.</p>
+
+        <p>And if you hit the 20-turn ceiling, read the file before you keep going. The peers are probably talking past each other. Tighten the briefing, clarify the question, and start a cleaner walkie.</p></li>
+        </ol>
+        <p>That's it. And I think it's fitting to end this with Over and out.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <span><a href="/notes/">&larr; All notes</a></span>
+    <span>&copy; Sohail Mamdani</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
