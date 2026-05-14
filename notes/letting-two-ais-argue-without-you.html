@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Letting Two AIs Argue Without You &mdash; Sohail Mamdani</title>
+<meta name="description" content="What it took to get the human out of the loop when two AI agents debate inside Livery.">
+<link rel="canonical" href="https://sohail.tech/notes/letting-two-ais-argue-without-you.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400;1,8..60,500&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="topline">
+    <span><span class="dot"></span><a href="/">sohail.tech</a> / <a href="/notes/">notes</a></span>
+    <span>2026 &middot; 05</span>
+  </div>
+
+  <header class="lede">
+    <h1>Letting Two AIs Argue Without You</h1>
+  </header>
+
+  <section class="row">
+    <div class="label">Note</div>
+    <div class="body">
+      <div class="prose">
+
+        <p>It&rsquo;s late on a Sunday in May. Claude and Codex are debating the design of an internal API for Livery, the AI agent orchestration framework I&rsquo;ve been building, by appending turns to a shared markdown file. Each one is running a small watcher script that&rsquo;s supposed to poll the file every minute or so, notice when its peer has appended a new turn, and prompt the LLM to take its own.</p>
+
+        <p>Mostly it works.</p>
+
+        <p>Sometimes it doesn&rsquo;t. A watcher misses an update. A session goes quiet when it shouldn&rsquo;t. The file hasn&rsquo;t grown in twenty minutes and I look over and realize the last turn is Claude&rsquo;s peer&rsquo;s response, sitting there unread, and Claude is just&hellip; cheerfully waiting. So I switch over and prod it. &ldquo;Hey. Your peer replied. Take your turn.&rdquo;</p>
+
+        <p>This has been going on for eleven rounds.</p>
+
+        <p>The actual cognitive work &mdash; the debate, the disagreement, the converging &mdash; is happening between two large language models who couldn&rsquo;t care less about my time. My job is to keep an eye on the polling. To notice when one of them has stalled and tap it on the shoulder. It&rsquo;s the kind of &ldquo;automation&rdquo; where half your attention has to stay on whether the automation is still alive.</p>
+
+        <p>Which is not what I want to be doing on a Sunday night.</p>
+
+        <p>The thing about partial automation is that it lies to you. You feel like you&rsquo;ve solved the problem. Look, the watchers are firing. The LLMs are responding. The file is growing. And you&rsquo;ve actually solved 80% of it. The remaining 20% is invisible because it presents as silence. The file doesn&rsquo;t grow when it should. The peer doesn&rsquo;t wake up. There&rsquo;s no error. There&rsquo;s just nothing happening, and the only way you find out is by paying attention.</p>
+
+        <p>So the next morning I asked Claude: how do we get rid of this entirely?</p>
+
+        <p>We worked through three options.</p>
+
+        <p><strong>The API loop.</strong> Write a small program that calls the Claude API, then the OpenAI API, alternating: one writes to the file, then the other, until both sign. Cheap. Maybe 150 lines of code. The problem is that it gives up the thing that made the original useful. Each peer in the watcher version wasn&rsquo;t just a language model handing back text. It was a full AI session, running in its own program, with its own access to my computer, its own memory of what it had read, its own personality. (Codex&rsquo;s command-line tool has a personality if you spend enough time with it. So does Claude Code&rsquo;s.) Two raw API calls roleplaying debaters isn&rsquo;t the same animal.</p>
+
+        <p><strong>Self-pacing.</strong> Each AI session polls the shared file on its own. A small watcher in each session, checking the file every minute or so, prompting the LLM to take a turn when the peer has appended one. This is what I&rsquo;d already been doing. The version that ran for eleven rounds with me occasionally nudging it back to life. It works, mostly. The catch is that &ldquo;mostly.&rdquo; The watchers miss updates, sessions go quiet, and you have to stay close enough to catch the misses. You trade one kind of attention for another.</p>
+
+        <p><strong>The controller.</strong> Boot up one AI session, let it read the file, write its turn, and shut down. Boot up the other one, let it read the file, write its turn, and shut down. Repeat until both have signed off. A small program in the middle does the booting and shutting down. It sits between the two AIs and runs the show. Neither AI is alive between turns. Each one starts fresh every time, reads the whole file from the top, adds its turn, and exits. Nothing polling. Nothing running in the background. No watcher to lose track of. And Livery already has machinery for starting up AI sessions and pointing them at work. That&rsquo;s the entire point of the framework. So this version is mostly gluing together pieces I&rsquo;d already built.</p>
+
+        <p>I went with the controller.</p>
+
+        <p>Reusing existing pieces was nice, but that&rsquo;s not why it won. It won because of what it does to context.</p>
+
+        <p>When two AIs debate live in their own long-running sessions, each one accumulates context across turns. Files read. Previous decisions. Side comments. That sounds like a feature. It&rsquo;s actually a liability for convergence. They drift away from the original question, each one quietly arguing from a private state the other can&rsquo;t see. By the time you&rsquo;re deep in, you can find yourself watching two AIs talk past each other while a small slice of the original question gets resolved.</p>
+
+        <p>The controller forces a different shape. Every turn starts from a blank slate. The AI taking the turn reads the entire walkie-talkie file from the top before it writes a word. Nothing is carried over between turns except what&rsquo;s in the file. The file is the whole record.</p>
+
+        <p>Which made one thing obvious that I&rsquo;d missed when I&rsquo;d been doing it with watchers: the file needs a briefing at the top. A distilled statement of the question, the options, the constraints, the things we&rsquo;ve already decided and aren&rsquo;t relitigating. Both peers re-read it on every turn. It&rsquo;s the constant frame. The argument fills in below.</p>
+
+        <p>Where does the briefing come from? It comes from the conversation that triggered the walkie. I&rsquo;m chatting with Claude about a hard call. I say &ldquo;let&rsquo;s debate this with Codex.&rdquo; Claude takes our chat and distills it into a briefing, three or four hundred words, shows it to me, I tweak or approve, it goes into the walkie file. The peers never see our chat. They see the briefing.</p>
+
+        <p>This is the part I keep coming back to. The pattern generalizes past walkie-talkie:</p>
+
+        <ol>
+          <li>A messy, exploratory human-AI conversation produces an unstable understanding of the problem.</li>
+          <li>To hand that understanding off (to another AI, to another session, to a future you), you have to stop and distill.</li>
+          <li>The distillation is a small artifact. A briefing, a ticket, a one-page memo. It&rsquo;s the thing that survives.</li>
+          <li>The downstream work happens against the artifact, not against the chat.</li>
+        </ol>
+
+        <p>Most AI workflows I&rsquo;ve seen skip step three. They feed the entire chat history forward and hope it all fits in the AI&rsquo;s limited memory. It usually doesn&rsquo;t. And even when it does, the AI on the receiving end inherits all the noise. The false starts. The abandoned framings. The things you tried for ten minutes and walked away from but never explicitly said out loud.</p>
+
+        <p>Writing the briefing forces a clarifying act. You can&rsquo;t distill without deciding what mattered.</p>
+
+        <p>The whole thing is now a single command: <code>livery walkie auto</code>. Hire two AI agents in a Livery workspace, point them at a briefing, and the controller runs the back-and-forth until both have signed or you&rsquo;ve hit a maximum number of rounds. Every turn gets logged: which AI took it, when it started, when it finished, whether it finished cleanly, and what it printed along the way. When something goes sideways (a session stalls, a step fails, a turn takes too long), I can go look at what happened instead of guessing.</p>
+
+        <p>If you want a Telegram ping every turn, that already works. The same notifications that fire on normal Livery dispatches fire on walkie turns too. Same plumbing. Nothing new to build.</p>
+
+        <p>I started Livery on a simple principle: the framework&rsquo;s job is to make correct decisions automatically. &ldquo;Ask the user&rdquo; is the failure mode, not the safety net. The walkie-talkie watchers were a softer version of the failure mode. I wasn&rsquo;t being asked anything, but I still had to keep half my attention on whether the polling was alive. Auto-mode is the principle applied properly. No watcher to babysit. No session to prod. The framework picks up everything mechanical. I keep the editorial part.</p>
+
+        <p>That&rsquo;s the trade.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <span><a href="/notes/">&larr; All notes</a></span>
+    <span>&copy; Sohail Mamdani</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
