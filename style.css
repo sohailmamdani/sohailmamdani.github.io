@@ -327,6 +327,14 @@ section.row > .body { min-width: 0; }
   margin: 0;
 }
 
+/* ───────── threads embed ───────── */
+.text-post-media {
+  margin: 0 0 2.5rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 /* ───────── prose (long-form notes) ───────── */
 .prose {
   font-family: var(--serif);
