@@ -327,6 +327,90 @@ section.row > .body { min-width: 0; }
   margin: 0;
 }
 
+/* ───────── prose (long-form notes) ───────── */
+.prose {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--fg);
+  max-width: 62ch;
+  letter-spacing: 0;
+}
+.prose p {
+  margin: 0 0 1.1rem;
+}
+.prose > *:last-child { margin-bottom: 0; }
+.prose h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin: 2.25rem 0 0.85rem;
+}
+.prose h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 1.75rem 0 0.55rem;
+}
+.prose a { border-bottom-color: var(--link-underline); }
+.prose ul, .prose ol { padding-left: 1.4rem; margin: 0 0 1.1rem; }
+.prose li { margin: 0.3rem 0; }
+.prose li > ul, .prose li > ol { margin: 0.3rem 0 0.4rem; }
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  border-left: 2px solid var(--hairline);
+  color: var(--muted);
+  font-style: italic;
+}
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--hairline);
+  margin: 2.25rem 0;
+}
+.prose code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--paper);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.prose pre {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  background: var(--paper);
+  padding: 1rem 1.15rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  border-radius: 0;
+}
+.prose img,
+.prose figure {
+  display: block;
+  max-width: 100%;
+  margin: 1.75rem 0;
+}
+.prose img { height: auto; }
+.prose figcaption {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+.prose strong { font-weight: 600; }
+.prose em { font-style: italic; }
+.prose small { font-size: 0.85em; color: var(--muted); }
+
 /* ───────── footer ───────── */
 footer.colophon {
   margin-top: 5rem;
