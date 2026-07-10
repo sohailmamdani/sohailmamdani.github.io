@@ -136,10 +136,13 @@ a:focus-visible {
 .hero {
   min-height: 590px;
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.72fr);
-  gap: clamp(4rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 790px);
   align-items: center;
   padding: clamp(5.5rem, 10vw, 9rem) clamp(0rem, 3vw, 2.5rem) clamp(5rem, 8vw, 7rem);
+}
+
+.hero-primary {
+  max-width: 790px;
 }
 
 .hero-primary h1 {
@@ -202,12 +205,6 @@ a:focus-visible {
   border-color: currentColor;
 }
 
-.hero-aside {
-  min-height: 315px;
-  padding: 1.9rem 0 1.5rem clamp(2.3rem, 5vw, 4.5rem);
-  border-left: 1px solid var(--line);
-}
-
 .eyebrow,
 .section-label,
 .footer-label {
@@ -221,33 +218,6 @@ a:focus-visible {
 
 .blue {
   color: var(--blue);
-}
-
-.hero-role {
-  margin: 2.15rem 0 0;
-  color: var(--ink-soft);
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 2.15;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.hairline {
-  display: block;
-  width: 60px;
-  height: 1px;
-  margin: 4.35rem 0 2.25rem;
-  background: var(--line-strong);
-}
-
-.hero-date {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .projects {
@@ -790,17 +760,6 @@ footer.colophon a {
   .hero {
     grid-template-columns: 1fr;
     gap: 3.5rem;
-  }
-
-  .hero-aside {
-    min-height: auto;
-    padding: 2rem 0 0;
-    border-top: 1px solid var(--line);
-    border-left: 0;
-  }
-
-  .hairline {
-    margin: 2rem 0 1.5rem;
   }
 
   .project,
